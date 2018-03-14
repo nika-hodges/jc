@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:divider="@drawable/bg_divider"
+              android:orientation="horizontal"
+              android:paddingLeft="12dp"
+              android:paddingRight="12dp"
+              android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/tv_awards"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/common_60"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_award_number"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/common_60"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_award_price"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/common_60"
+        android:textSize="14sp"/>
+
+</LinearLayout>

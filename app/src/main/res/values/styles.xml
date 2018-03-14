@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppWelcome" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@drawable/welcome</item>
+    </style>
+
+    <style name="AppTheme.Main" parent="AppTheme"/>
+
+    <style name="Circle_LoadingDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@drawable/bg_loading</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="myTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <!-- 这个是设置title textview的默认颜色，如果也设置了tabTextColor，则以后者为准-->
+        <!--<item name="android:textColor">@color/tab_textcolor_normal</item>-->
+        <item name="textAllCaps">true</item>
+    </style>
+</resources>

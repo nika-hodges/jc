@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"></com.youth.banner.Banner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:drawableLeft="@drawable/ic_laba"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="热门玩法："
+            android:textColor="@color/orange"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/bg_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:id="@+id/rl_ssq"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ic_ssq"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/game_ssq" />
+
+                <TextView
+                    android:id="@+id/tv_ssq_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ic_ssq"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_ssq"
+                    android:text="双色球"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_ssq_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_ssq"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_ssq"
+                    android:text="奖池："
+                    android:textColor="@color/common_60"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_ssq"
+                    android:layout_toRightOf="@id/tv_ssq_des"
+                    android:background="@drawable/bg_red_4dp_round"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="7.47亿"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_dlt"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ic_dlt"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/game_chaojidaletou" />
+
+                <TextView
+                    android:id="@+id/tv_dlt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ic_dlt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_dlt"
+                    android:text="大乐透"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_dlt_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_dlt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_dlt"
+                    android:text="3元赢1600万"
+                    android:textColor="@color/common_60"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/bg_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:id="@+id/rl_pl3"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ic_pl3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/game_pailiesan" />
+
+                <TextView
+                    android:id="@+id/tv_pl3_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ic_pl3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_pl3"
+                    android:text="排列3"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_pl3_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_pl3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_pl3"
+                    android:text="好运等你来"
+                    android:textColor="@color/common_60"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pl5"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ic_pl5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/game_pailiewu" />
+
+                <TextView
+                    android:id="@+id/tv_pl5_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ic_pl5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_pl5"
+                    android:text="排列5"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_pl5_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_pl5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_pl5"
+                    android:text="好运等你来"
+                    android:textColor="@color/common_60"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/bg_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:id="@+id/rl_qlc"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ic_qlc"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/game_qixingcai" />
+
+                <TextView
+                    android:id="@+id/tv_qlc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ic_qlc"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_qlc"
+                    android:text="七乐彩"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_qlc_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_qlc"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_qlc"
+                    android:text="新玩法"
+                    android:textColor="@color/common_60"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_qxc"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ic_qxc"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/game_qilecai" />
+
+                <TextView
+                    android:id="@+id/tv_qxc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ic_qxc"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_qxc"
+                    android:text="七星彩"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_qxc_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_qxc"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_qxc"
+                    android:text="中奖更容易"
+                    android:textColor="@color/common_60"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:drawableLeft="@drawable/ic_laba"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="体育竞猜："
+            android:textColor="@color/green"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/bg_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:id="@+id/rl_zq"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ic_zq"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/game_sporttreyfootball" />
+
+                <TextView
+                    android:id="@+id/tv_zq_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ic_zq"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_zq"
+                    android:text="竞猜足球"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_zq_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_zq"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_zq"
+                    android:text="天天有比赛"
+                    android:textColor="@color/common_60"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_lq"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ic_lq"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/game_sporttreybaseketball" />
+
+                <TextView
+                    android:id="@+id/tv_lq_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ic_lq"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_lq"
+                    android:text="竞猜篮球"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_lq_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ic_lq"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_lq"
+                    android:text="中奖率最高"
+                    android:textColor="@color/common_60"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

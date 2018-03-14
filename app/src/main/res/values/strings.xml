@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">cpdemo</string>
+    <!--下载包名-->
+    <string name="bagname">com.bxvip.app.jiuzhouzy</string>
+    <!--新包的下载路径-->
+    <string name="appurl">http://app.superbucket.s3.amazonaws.com/anzuo.gg1700.com/jiuzhouzy.apk</string>
+    <string name="expect">第%1$s期</string>¬
+</resources>
