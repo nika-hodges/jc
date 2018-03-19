@@ -25,7 +25,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
-            android:background="@drawable/types_ssq"/>
+            android:background="@drawable/ic_ssq1"/>
 
         <TextView
             android:id="@+id/tv_title"

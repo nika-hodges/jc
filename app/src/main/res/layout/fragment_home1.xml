@@ -51,7 +51,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_ssq" />
+                    android:src="@drawable/ic_ssq" />
 
                 <TextView
                     android:id="@+id/tv_ssq_title"
@@ -91,7 +91,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_chaojidaletou" />
+                    android:src="@drawable/ic_dlt" />
 
                 <TextView
                     android:id="@+id/tv_dlt_title"
@@ -131,7 +131,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_3d" />
+                    android:src="@drawable/ic_3d" />
 
                 <TextView
                     android:id="@+id/tv_3d_title"
@@ -177,7 +177,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_pailiesan" />
+                    android:src="@drawable/ic_pls" />
 
                 <TextView
                     android:id="@+id/tv_pl3_title"
@@ -217,7 +217,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_pailiewu" />
+                    android:src="@drawable/ic_pl5" />
 
                 <TextView
                     android:id="@+id/tv_pl5_title"
@@ -257,7 +257,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_zucai14" />
+                    android:src="@drawable/ic_sfc" />
 
                 <TextView
                     android:id="@+id/tv_sfc_title"
@@ -303,7 +303,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_qixingcai" />
+                    android:src="@drawable/ic_qxc" />
 
                 <TextView
                     android:id="@+id/tv_qxc_title"
@@ -343,7 +343,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_qilecai" />
+                    android:src="@drawable/ic_qlc" />
 
                 <TextView
                     android:id="@+id/tv_qlc_title"
@@ -383,7 +383,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_zucai9" />
+                    android:src="@drawable/ic_rx9" />
 
                 <TextView
                     android:id="@+id/tv_rx9_title"
@@ -447,7 +447,7 @@
                     android:layout_height="45dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_sporttreyfootball" />
+                    android:src="@drawable/ic_jczq" />
 
                 <TextView
                     android:id="@+id/tv_jczq_title"
@@ -487,7 +487,7 @@
                     android:layout_height="45dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_sporttreyyczs" />
+                    android:src="@drawable/ic_zqdc" />
 
                 <TextView
                     android:id="@+id/tv_zqdc_title"
@@ -527,7 +527,7 @@
                     android:layout_height="45dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/game_sporttreybaseketball" />
+                    android:src="@drawable/ic_jclq" />
 
                 <TextView
                     android:id="@+id/tv_jclq_title"

@@ -131,9 +131,9 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
 
     private void setPushStatus() {
         if (mPush) {
-            mCheckBox.setBackgroundResource(R.drawable.on);
+            mCheckBox.setBackgroundResource(R.drawable.open);
         } else {
-            mCheckBox.setBackgroundResource(R.drawable.off);
+            mCheckBox.setBackgroundResource(R.drawable.kai);
         }
     }
 

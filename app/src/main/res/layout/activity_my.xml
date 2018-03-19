@@ -37,7 +37,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:background="@drawable/push_open"
+            android:background="@drawable/open"
             android:checked="true" />
     </RelativeLayout>
 

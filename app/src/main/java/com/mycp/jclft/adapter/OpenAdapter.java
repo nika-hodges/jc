@@ -81,25 +81,25 @@ public class OpenAdapter extends BaseAdapter {
             }
             switch (openBean.code) {
                 case "ssq":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.game_ssq));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_ssq));
                     break;
                 case "dlt":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.game_chaojidaletou));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_dlt));
                     break;
                 case "fc3d":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.game_3d));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_3d));
                     break;
                 case "pl3":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.game_pailiesan));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_pls));
                     break;
                 case "pl5":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.game_pailiewu));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_pl5));
                     break;
                 case "qxc":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.game_qixingcai));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_qxc));
                     break;
                 case "qlc":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.game_qilecai));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_qlc));
                     break;
             }
             if (!TextUtils.isEmpty(openBean.expect)) {

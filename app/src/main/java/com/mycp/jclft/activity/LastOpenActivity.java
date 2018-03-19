@@ -138,37 +138,37 @@ public class LastOpenActivity extends AppCompatActivity {
     private void initData() {
         switch (mName) {
             case "七星彩":
-                mIconIv.setBackgroundResource(R.drawable.game_qixingcai);
+                mIconIv.setBackgroundResource(R.drawable.ic_qxc);
                 break;
             case "七乐彩":
-                mIconIv.setBackgroundResource(R.drawable.game_qilecai);
+                mIconIv.setBackgroundResource(R.drawable.ic_qlc);
                 break;
             case "排列3":
-                mIconIv.setBackgroundResource(R.drawable.game_pailiesan);
+                mIconIv.setBackgroundResource(R.drawable.ic_pls);
                 break;
             case "排列5":
-                mIconIv.setBackgroundResource(R.drawable.game_pailiewu);
+                mIconIv.setBackgroundResource(R.drawable.ic_pl5);
                 break;
             case "双色球":
-                mIconIv.setBackgroundResource(R.drawable.game_ssq);
+                mIconIv.setBackgroundResource(R.drawable.ic_ssq);
                 break;
             case "大乐透":
-                mIconIv.setBackgroundResource(R.drawable.game_chaojidaletou);
+                mIconIv.setBackgroundResource(R.drawable.ic_dlt);
                 break;
             case "胜负彩":
-                mIconIv.setBackgroundResource(R.drawable.game_zucai14);
+                mIconIv.setBackgroundResource(R.drawable.ic_sfc);
                 break;
             case "任选9":
-                mIconIv.setBackgroundResource(R.drawable.game_zucai9);
+                mIconIv.setBackgroundResource(R.drawable.ic_rx9);
                 break;
             case "竞猜足球":
-                mIconIv.setBackgroundResource(R.drawable.game_sporttreyfootball);
+                mIconIv.setBackgroundResource(R.drawable.ic_jczq);
                 break;
             case "竞猜篮球":
-                mIconIv.setBackgroundResource(R.drawable.game_sporttreybaseketball);
+                mIconIv.setBackgroundResource(R.drawable.ic_jclq);
                 break;
             case "足球单场":
-                mIconIv.setBackgroundResource(R.drawable.game_sporttreyyczs);
+                mIconIv.setBackgroundResource(R.drawable.ic_zqdc);
                 break;
             default:
                 break;

@@ -40,10 +40,10 @@ public class OpenNumberAdapter1 extends RecyclerView.Adapter<OpenNumberAdapter1.
     public void onBindViewHolder(MyViewHolder holder, int position) {
         if (!TextUtils.isEmpty(data.get(position))) {
             if (data.get(position).contains("特别")) {
-                holder.codeTv.setBackgroundResource(R.drawable.ic_bifen);
+                holder.codeTv.setBackgroundResource(R.drawable.ic_bg_bifen);
                 holder.codeTv.setText(data.get(position).substring(0, data.get(position).indexOf("特")));
             } else {
-                holder.codeTv.setBackgroundResource(R.drawable.ic_bifen);
+                holder.codeTv.setBackgroundResource(R.drawable.ic_bg_bifen);
                 holder.codeTv.setText(data.get(position));
             }
         }

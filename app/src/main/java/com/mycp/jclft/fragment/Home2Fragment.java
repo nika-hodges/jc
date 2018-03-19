@@ -1,23 +1,31 @@
 package com.mycp.jclft.fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.mycp.jclft.R;
+import com.mycp.jclft.activity.ExpActivity;
+import com.mycp.jclft.activity.HelpActivity;
 import com.mycp.jclft.activity.LastOpenActivity;
+import com.mycp.jclft.activity.NewsActivity;
 import com.mycp.jclft.activity.SportActivity;
 import com.mycp.jclft.base.BaseFragment;
 import com.mycp.jclft.loader.GlideImageLoader;
+import com.paradoxie.autoscrolltextview.VerticalTextview;
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
 
 /**
- * Created by leo on 2018/3/11.
+ * Des:
+ * Author: leo
+ * Date：2018/2/27.
  */
 
-public class Home1Fragment extends BaseFragment implements View.OnClickListener {
+public class Home2Fragment extends BaseFragment implements View.OnClickListener {
     private ArrayList<Integer> BannerList = new ArrayList<>();
     private RelativeLayout mSsqRl;
     private RelativeLayout mDltRl;
@@ -27,17 +35,23 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
     private RelativeLayout mQlcRl;
     private RelativeLayout mZqRl;
     private RelativeLayout mLqRl;
-    private RelativeLayout mRx9Rl;
-    private RelativeLayout mSfcRl;
-    private RelativeLayout mZqdcRl;
-    private RelativeLayout m3DRl;
+    private VerticalTextview mNotifyTv;
+    private ArrayList<String> mNotify = new ArrayList<>();
+    private LinearLayout helpLl;
+    private LinearLayout proLl;
+    private LinearLayout newsLl;
 
     @Override
-    protected void initView(View view) {
+    protected int bindLayout() {
+        return R.layout.fragment_home2;
+    }
+
+    @Override
+    public void initView(View view) {
         Banner banner = (Banner) view.findViewById(R.id.banner);
-        BannerList.add(R.drawable.banner5);
-        BannerList.add(R.drawable.banner7);
-        BannerList.add(R.drawable.banner6);
+        BannerList.add(R.drawable.banner1);
+        BannerList.add(R.drawable.banner2);
+        BannerList.add(R.drawable.banner3);
         BannerList.add(R.drawable.banner4);
         banner.setImages(BannerList)
                 .setImageLoader(new GlideImageLoader())
@@ -45,19 +59,17 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
 
         mSsqRl = (RelativeLayout) view.findViewById(R.id.rl_ssq);
         mDltRl = (RelativeLayout) view.findViewById(R.id.rl_dlt);
-        m3DRl = (RelativeLayout) view.findViewById(R.id.rl_3d);
         mPl3Rl = (RelativeLayout) view.findViewById(R.id.rl_pl3);
         mPl5Rl = (RelativeLayout) view.findViewById(R.id.rl_pl5);
         mQxcRl = (RelativeLayout) view.findViewById(R.id.rl_qxc);
         mQlcRl = (RelativeLayout) view.findViewById(R.id.rl_qlc);
-        mZqRl = (RelativeLayout) view.findViewById(R.id.rl_jczq);
-        mLqRl = (RelativeLayout) view.findViewById(R.id.rl_jclq);
+        mZqRl = (RelativeLayout) view.findViewById(R.id.rl_zq);
+        mLqRl = (RelativeLayout) view.findViewById(R.id.rl_lq);
+        newsLl = (LinearLayout) view.findViewById(R.id.ll_news);
+        proLl = (LinearLayout) view.findViewById(R.id.ll_pro);
+        helpLl = (LinearLayout) view.findViewById(R.id.ll_help);
+        mNotifyTv = (VerticalTextview) view.findViewById(R.id.tv_notification);
 
-        mRx9Rl = (RelativeLayout) view.findViewById(R.id.rl_rx9);
-        mSfcRl = (RelativeLayout) view.findViewById(R.id.rl_sfc);
-        mZqdcRl = (RelativeLayout) view.findViewById(R.id.rl_zqdc);
-
-        m3DRl.setOnClickListener(this);
         mSsqRl.setOnClickListener(this);
         mDltRl.setOnClickListener(this);
         mPl3Rl.setOnClickListener(this);
@@ -66,20 +78,22 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
         mQlcRl.setOnClickListener(this);
         mZqRl.setOnClickListener(this);
         mLqRl.setOnClickListener(this);
-        mRx9Rl.setOnClickListener(this);
-        mSfcRl.setOnClickListener(this);
-        mZqdcRl.setOnClickListener(this);
-    }
-
-    @Override
-    protected int bindLayout() {
-        return R.layout.fragment_home1;
+        newsLl.setOnClickListener(this);
+        proLl.setOnClickListener(this);
+        helpLl.setOnClickListener(this);
     }
 
     @Override
     protected void initData() {
-
+        mNotify.add("周六064比赛取消");
+        mNotify.add("美职篮新赛季战火重燃");
+        mNotify.add("周日053比赛取消");
+        mNotifyTv.setTextList(mNotify);//加入显示内容,集合类型
+        mNotifyTv.setText(14, 5, getResources().getColor(R.color.orange));//设置属性,具体跟踪源码
+        mNotifyTv.setTextStillTime(4000);//设置停留时长间隔
+        mNotifyTv.setAnimTime(300);//设置进入和退出的时间间隔
     }
+
 
     @Override
     public void onClick(View v) {
@@ -89,9 +103,6 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
                 break;
             case R.id.rl_dlt:
                 jumpToLastOpenActivity("大乐透");
-                break;
-            case R.id.rl_3d:
-                jumpToLastOpenActivity("3D");
                 break;
             case R.id.rl_pl3:
                 jumpToLastOpenActivity("排列3");
@@ -105,29 +116,29 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
             case R.id.rl_qlc:
                 jumpToLastOpenActivity("七乐彩");
                 break;
-            case R.id.rl_sfc:
-                jumpToLastOpenActivity("胜负彩");
-                break;
-            case R.id.rl_rx9:
-                jumpToLastOpenActivity("任选9");
-                break;
-            case R.id.rl_jczq:
+            case R.id.rl_zq:
                 Intent intent = new Intent(getActivity(), SportActivity.class);
                 intent.putExtra("name", "竞猜足球");
                 getActivity().startActivity(intent);
                 break;
-            case R.id.rl_jclq:
+            case R.id.rl_lq:
                 Intent intent1 = new Intent(getActivity(), SportActivity.class);
                 intent1.putExtra("name", "竞猜篮球");
                 getActivity().startActivity(intent1);
                 break;
-            case R.id.rl_zqdc:
-                Intent intent2 = new Intent(getActivity(), SportActivity.class);
-                intent2.putExtra("name", "足球单场");
+            case R.id.ll_news:
+                Intent intent2 = new Intent(getActivity(), NewsActivity.class);
                 getActivity().startActivity(intent2);
                 break;
-            default:
+            case R.id.ll_pro:
+                Intent intent3 = new Intent(getActivity(), ExpActivity.class);
+                getActivity().startActivity(intent3);
                 break;
+            case R.id.ll_help:
+                Intent intent4 = new Intent(getActivity(), HelpActivity.class);
+                getActivity().startActivity(intent4);
+                break;
+
         }
     }
 
@@ -138,5 +149,17 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
         Intent intent = new Intent(getActivity(), LastOpenActivity.class);
         intent.putExtra("name", name);
         getActivity().startActivity(intent);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mNotifyTv.startAutoScroll();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mNotifyTv.stopAutoScroll();
     }
 }

@@ -4,7 +4,7 @@
     android:layout_width="17dp"
     android:layout_height="25dp"
     android:layout_marginLeft="3dp"
-    android:background="@drawable/ic_bifen"
+    android:background="@drawable/ic_bg_bifen"
     android:gravity="center"
     android:text="06"
     android:textColor="@color/white"

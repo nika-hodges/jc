@@ -9,6 +9,7 @@ import com.mycp.jclft.activity.LastOpenActivity;
 import com.mycp.jclft.activity.SportActivity;
 import com.mycp.jclft.base.BaseFragment;
 import com.mycp.jclft.loader.GlideImageLoader;
+import com.paradoxie.autoscrolltextview.VerticalTextview;
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
