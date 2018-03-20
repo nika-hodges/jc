@@ -1,7 +1,6 @@
 package com.mycp.jclft.fragment;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -9,7 +8,7 @@ import android.widget.RelativeLayout;
 import com.mycp.jclft.R;
 import com.mycp.jclft.activity.ExpActivity;
 import com.mycp.jclft.activity.HelpActivity;
-import com.mycp.jclft.activity.LastOpenActivity;
+import com.mycp.jclft.activity.LastOpenActivity1;
 import com.mycp.jclft.activity.NewsActivity;
 import com.mycp.jclft.activity.SportActivity;
 import com.mycp.jclft.base.BaseFragment;
@@ -99,23 +98,31 @@ public class Home2Fragment extends BaseFragment implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.rl_ssq:
-                jumpToLastOpenActivity("双色球");
+                jumpToLastOpenActivity("双色球", "ssq");
                 break;
             case R.id.rl_dlt:
-                jumpToLastOpenActivity("大乐透");
+                jumpToLastOpenActivity("大乐透", "dlt");
+                break;
+            case R.id.rl_3d:
+                jumpToLastOpenActivity("3D", "fc3d");
                 break;
             case R.id.rl_pl3:
-                jumpToLastOpenActivity("排列3");
+                jumpToLastOpenActivity("排列3", "pl3");
                 break;
             case R.id.rl_pl5:
-                jumpToLastOpenActivity("排列5");
+                jumpToLastOpenActivity("排列5", "pl5");
                 break;
             case R.id.rl_qxc:
-                jumpToLastOpenActivity("七星彩");
+                jumpToLastOpenActivity("七星彩", "qxc");
                 break;
             case R.id.rl_qlc:
-                jumpToLastOpenActivity("七乐彩");
+                jumpToLastOpenActivity("七乐彩", "qlc");
                 break;
+            case R.id.rl_sfc:
+                jumpToLastOpenActivity("胜负彩", "zcsfc");
+                break;
+            case R.id.rl_rx9:
+                jumpToLastOpenActivity("任选9", "rx9");
             case R.id.rl_zq:
                 Intent intent = new Intent(getActivity(), SportActivity.class);
                 intent.putExtra("name", "竞猜足球");
@@ -142,12 +149,13 @@ public class Home2Fragment extends BaseFragment implements View.OnClickListener 
         }
     }
 
-    private void jumpToLastOpenActivity(String name) {
+    private void jumpToLastOpenActivity(String name,String code) {
         if (getActivity() == null || getActivity().isFinishing() || getActivity().isDestroyed()) {
             return;
         }
-        Intent intent = new Intent(getActivity(), LastOpenActivity.class);
+        Intent intent = new Intent(getActivity(), LastOpenActivity1.class);
         intent.putExtra("name", name);
+        intent.putExtra("code", code);
         getActivity().startActivity(intent);
     }
 

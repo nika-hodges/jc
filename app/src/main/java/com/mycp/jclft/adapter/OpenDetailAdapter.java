@@ -67,6 +67,11 @@ public class OpenDetailAdapter extends BaseAdapter {
         if (lotteryDetails == null) {
             return null;
         }
+        if (position % 2 == 0) {
+            convertView.setBackgroundColor(mContext.getResources().getColor(R.color.common_f8));
+        } else {
+            convertView.setBackgroundColor(mContext.getResources().getColor(R.color.white));
+        }
         if (!TextUtils.isEmpty(lotteryDetails.awards)) {
             if (!TextUtils.isEmpty(lotteryDetails.type)) {
                 holder.awardsTv.setText(lotteryDetails.awards + "(" + lotteryDetails.type + ")");

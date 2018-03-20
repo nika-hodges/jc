@@ -77,13 +77,19 @@ public class PastOpenActivity extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        mCode = intent.getStringExtra("code");
         mName = intent.getStringExtra("name");
+        mCode = intent.getStringExtra("code");
+        if ("rx9".equals(mCode)) {
+            mTop.getRightLayout().setVisibility(View.GONE);
+        }
         mTop.setTitle(mName);
     }
 
     private void initData() {
         mTop.setTitle(mName);
+        if ("rx9".equals(mCode)) {
+            mTop.getRightLayout().setVisibility(View.GONE);
+        }
         mOpenAdapter = new OpenAdapter(this);
         OkHttpUtils
                 .get()

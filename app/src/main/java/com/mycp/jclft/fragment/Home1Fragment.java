@@ -85,31 +85,31 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.rl_ssq:
-                jumpToLastOpenActivity("双色球");
+                jumpToLastOpenActivity("双色球", "ssq");
                 break;
             case R.id.rl_dlt:
-                jumpToLastOpenActivity("大乐透");
+                jumpToLastOpenActivity("大乐透", "dlt");
                 break;
             case R.id.rl_3d:
-                jumpToLastOpenActivity("3D");
+                jumpToLastOpenActivity("3D", "fc3d");
                 break;
             case R.id.rl_pl3:
-                jumpToLastOpenActivity("排列3");
+                jumpToLastOpenActivity("排列3", "pl3");
                 break;
             case R.id.rl_pl5:
-                jumpToLastOpenActivity("排列5");
+                jumpToLastOpenActivity("排列5", "pl5");
                 break;
             case R.id.rl_qxc:
-                jumpToLastOpenActivity("七星彩");
+                jumpToLastOpenActivity("七星彩", "qxc");
                 break;
             case R.id.rl_qlc:
-                jumpToLastOpenActivity("七乐彩");
+                jumpToLastOpenActivity("七乐彩", "qlc");
                 break;
             case R.id.rl_sfc:
-                jumpToLastOpenActivity("胜负彩");
+                jumpToLastOpenActivity("胜负彩", "zcsfc");
                 break;
             case R.id.rl_rx9:
-                jumpToLastOpenActivity("任选9");
+                jumpToLastOpenActivity("任选9", "rx9");
                 break;
             case R.id.rl_jczq:
                 Intent intent = new Intent(getActivity(), SportActivity.class);
@@ -131,12 +131,13 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
         }
     }
 
-    private void jumpToLastOpenActivity(String name) {
+    private void jumpToLastOpenActivity(String name, String code) {
         if (getActivity() == null || getActivity().isFinishing() || getActivity().isDestroyed()) {
             return;
         }
         Intent intent = new Intent(getActivity(), LastOpenActivity.class);
         intent.putExtra("name", name);
+        intent.putExtra("code", code);
         getActivity().startActivity(intent);
     }
 }

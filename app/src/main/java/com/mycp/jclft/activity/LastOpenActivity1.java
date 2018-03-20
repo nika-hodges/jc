@@ -39,7 +39,7 @@ import okhttp3.Call;
  * Date：2018/3/4.
  */
 
-public class LastOpenActivity extends AppCompatActivity {
+public class LastOpenActivity1 extends AppCompatActivity {
 
     private String mName;
     private TextView mPricePoolTv;
@@ -61,7 +61,7 @@ public class LastOpenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_last_open);
+        setContentView(R.layout.activity_last_open1);
 
         Window window = getWindow();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -110,14 +110,14 @@ public class LastOpenActivity extends AppCompatActivity {
         mTop.getLeftLayout().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LastOpenActivity.this.finish();
+                LastOpenActivity1.this.finish();
             }
         });
         mTop.setRightText("查看往期");
         mTop.getRightLayout().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LastOpenActivity.this, PastOpenActivity.class);
+                Intent intent = new Intent(LastOpenActivity1.this, PastOpenActivity.class);
                 intent.putExtra("code", mCode);
                 intent.putExtra("name", mName);
                 startActivity(intent);
