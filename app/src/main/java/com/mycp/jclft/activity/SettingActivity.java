@@ -73,7 +73,6 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                     if (mDialog != null && mDialog.isShowing()) {
                         mDialog.dismiss();
                     }
-                    Toast.makeText(SettingActivity.this, "aaa", Toast.LENGTH_SHORT).show();
                     Toast.makeText(SettingActivity.this, "当前已是最新版本", Toast.LENGTH_SHORT).show();
                     break;
                 default:
@@ -131,9 +130,9 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
 
     private void setPushStatus() {
         if (mPush) {
-            mCheckBox.setBackgroundResource(R.drawable.open);
+            mCheckBox.setBackgroundResource(R.drawable.on);
         } else {
-            mCheckBox.setBackgroundResource(R.drawable.kai);
+            mCheckBox.setBackgroundResource(R.drawable.off);
         }
     }
 

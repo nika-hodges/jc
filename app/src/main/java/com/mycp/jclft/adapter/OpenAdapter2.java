@@ -23,11 +23,11 @@ import java.util.List;
  * Date：2018/3/3.
  */
 
-public class OpenAdapter1 extends BaseAdapter {
+public class OpenAdapter2 extends BaseAdapter {
     private List<OpenBean> mData;
     private Context mContex;
 
-    public OpenAdapter1(Context context) {
+    public OpenAdapter2(Context context) {
         mContex = context;
     }
 
@@ -60,7 +60,7 @@ public class OpenAdapter1 extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         OpenViewHolder holder = null;
-        OpenNumberAdapter openNumberAdapter = null;
+        OpenNumberAdapter2 openNumberAdapter2 = null;
         if (convertView == null) {
             holder = new OpenViewHolder();
             convertView = LayoutInflater.from(mContex).inflate(R.layout.item_open1, parent, false);
@@ -113,12 +113,12 @@ public class OpenAdapter1 extends BaseAdapter {
                         data.add(s);
                     }
                 }
-                if (openNumberAdapter == null) {
-                    openNumberAdapter = new OpenNumberAdapter(mContex);
+                if (openNumberAdapter2 == null) {
+                    openNumberAdapter2 = new OpenNumberAdapter2(mContex, position);
                 }
 //                if (openBean.name == "胜负彩" || openBean.name)
-                holder.numberRv.setAdapter(openNumberAdapter);
-                openNumberAdapter.setData(data);
+                holder.numberRv.setAdapter(openNumberAdapter2);
+                openNumberAdapter2.setData(data);
             }
         }
 

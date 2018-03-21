@@ -138,34 +138,34 @@ public class LastOpenActivity1 extends AppCompatActivity {
     private void initData() {
         switch (mName) {
             case "七星彩":
-                mIconIv.setBackgroundResource(R.drawable.ic_qxc);
+                mIconIv.setBackgroundResource(R.drawable.ic_qxc3);
                 break;
             case "七乐彩":
-                mIconIv.setBackgroundResource(R.drawable.ic_qlc);
+                mIconIv.setBackgroundResource(R.drawable.ic_qlc2);
                 break;
             case "排列3":
-                mIconIv.setBackgroundResource(R.drawable.ic_pls);
+                mIconIv.setBackgroundResource(R.drawable.ic_pls2);
                 break;
             case "排列5":
-                mIconIv.setBackgroundResource(R.drawable.ic_pl5);
+                mIconIv.setBackgroundResource(R.drawable.ic_pl51);
                 break;
             case "双色球":
-                mIconIv.setBackgroundResource(R.drawable.ic_ssq);
+                mIconIv.setBackgroundResource(R.drawable.ic_ssq2);
                 break;
             case "大乐透":
-                mIconIv.setBackgroundResource(R.drawable.ic_dlt);
+                mIconIv.setBackgroundResource(R.drawable.ic_dlt2);
                 break;
             case "胜负彩":
-                mIconIv.setBackgroundResource(R.drawable.ic_sfc);
+                mIconIv.setBackgroundResource(R.drawable.ic_sfc2);
                 break;
             case "任选9":
-                mIconIv.setBackgroundResource(R.drawable.ic_rx9);
+                mIconIv.setBackgroundResource(R.drawable.ic_rx92);
                 break;
             case "竞猜足球":
-                mIconIv.setBackgroundResource(R.drawable.ic_jczq);
+                mIconIv.setBackgroundResource(R.drawable.ic_jczq2);
                 break;
             case "竞猜篮球":
-                mIconIv.setBackgroundResource(R.drawable.ic_jclq);
+                mIconIv.setBackgroundResource(R.drawable.ic_jclq2);
                 break;
             case "足球单场":
                 mIconIv.setBackgroundResource(R.drawable.ic_zqdc);

@@ -11,6 +11,7 @@ import com.mycp.jclft.activity.HelpActivity;
 import com.mycp.jclft.activity.LastOpenActivity1;
 import com.mycp.jclft.activity.NewsActivity;
 import com.mycp.jclft.activity.SportActivity;
+import com.mycp.jclft.activity.SportActivity1;
 import com.mycp.jclft.base.BaseFragment;
 import com.mycp.jclft.loader.GlideImageLoader;
 import com.paradoxie.autoscrolltextview.VerticalTextview;
@@ -48,10 +49,10 @@ public class Home2Fragment extends BaseFragment implements View.OnClickListener 
     @Override
     public void initView(View view) {
         Banner banner = (Banner) view.findViewById(R.id.banner);
-        BannerList.add(R.drawable.banner1);
-        BannerList.add(R.drawable.banner2);
-        BannerList.add(R.drawable.banner3);
-        BannerList.add(R.drawable.banner4);
+        BannerList.add(R.drawable.banner8);
+        BannerList.add(R.drawable.banner9);
+        BannerList.add(R.drawable.banner11);
+        BannerList.add(R.drawable.banner6);
         banner.setImages(BannerList)
                 .setImageLoader(new GlideImageLoader())
                 .start();
@@ -134,7 +135,7 @@ public class Home2Fragment extends BaseFragment implements View.OnClickListener 
                 getActivity().startActivity(intent1);
                 break;
             case R.id.ll_news:
-                Intent intent2 = new Intent(getActivity(), NewsActivity.class);
+                Intent intent2 = new Intent(getActivity(), SportActivity1.class);
                 getActivity().startActivity(intent2);
                 break;
             case R.id.ll_pro:
@@ -149,7 +150,7 @@ public class Home2Fragment extends BaseFragment implements View.OnClickListener 
         }
     }
 
-    private void jumpToLastOpenActivity(String name,String code) {
+    private void jumpToLastOpenActivity(String name, String code) {
         if (getActivity() == null || getActivity().isFinishing() || getActivity().isDestroyed()) {
             return;
         }

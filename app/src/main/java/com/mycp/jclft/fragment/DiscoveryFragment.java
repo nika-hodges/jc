@@ -8,6 +8,7 @@ import com.mycp.jclft.activity.ExpActivity;
 import com.mycp.jclft.activity.HelpActivity;
 import com.mycp.jclft.activity.NewsActivity;
 import com.mycp.jclft.activity.SettingActivity;
+import com.mycp.jclft.activity.SportActivity1;
 import com.mycp.jclft.base.BaseFragment;
 import com.mycp.jclft.view.TopBarView;
 
@@ -28,6 +29,7 @@ public class DiscoveryFragment extends BaseFragment implements View.OnClickListe
         view.findViewById(R.id.rl_exp).setOnClickListener(this);
         view.findViewById(R.id.rl_help).setOnClickListener(this);
         view.findViewById(R.id.rl_setting).setOnClickListener(this);
+        view.findViewById(R.id.rl_bifen).setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +60,10 @@ public class DiscoveryFragment extends BaseFragment implements View.OnClickListe
             case R.id.rl_setting:
                 Intent intent3 = new Intent(getActivity(), SettingActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.rl_bifen:
+                Intent intent4 = new Intent(getActivity(), SportActivity1.class);
+                startActivity(intent4);
                 break;
         }
     }

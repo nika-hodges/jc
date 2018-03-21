@@ -11,9 +11,9 @@
         android:layout_height="wrap_content" />
 
     <android.support.design.widget.TabLayout
-        android:id="@+id/view_tab_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="44dp"
+        android:id="@+id/tab_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:tabBackground="@color/circle_remark_publish_bg"
         app:tabIndicatorColor="#E98A33"
         app:tabIndicatorHeight="1dp"

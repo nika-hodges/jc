@@ -21,6 +21,7 @@ import com.mycp.jclft.fragment.Home2Fragment;
 import com.mycp.jclft.fragment.HomeFragment;
 import com.mycp.jclft.fragment.NewsFragment;
 import com.mycp.jclft.fragment.OpenFragment;
+import com.mycp.jclft.fragment.OpenFragment1;
 import com.mycp.jclft.utils.BottomNavigationViewHelper;
 
 import java.util.ArrayList;
@@ -94,12 +95,12 @@ public class HomeActivity extends AppCompatActivity {
         mFragments = new ArrayList<>();
         Home2Fragment home2Fragment = new Home2Fragment();
 //        Home1Fragment home1Fragment = new Home1Fragment();
-        OpenFragment openFragment = new OpenFragment();
+        OpenFragment1 openFragment1 = new OpenFragment1();
         DiscoveryFragment discoveryFragment = new DiscoveryFragment();
 //        NewsFragment fragment3 = new NewsFragment();
 //        MyFragment fragment4 = new MyFragment();
         mFragments.add(home2Fragment);
-        mFragments.add(openFragment);
+        mFragments.add(openFragment1);
         mFragments.add(discoveryFragment);
 //        mFragments.add(fragment4);
     }

@@ -16,8 +16,31 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_kuaibao" />
+
+            <com.paradoxie.autoscrolltextview.VerticalTextview
+                android:id="@+id/tv_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:divider="@drawable/bg_divider"
+            android:dividerPadding="10dp"
+            android:orientation="horizontal"
+            android:showDividers="middle">
 
             <LinearLayout
                 android:id="@+id/ll_news"
@@ -28,18 +51,18 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_news2" />
+                    android:src="@drawable/icon_t1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:paddingTop="5dp"
-                    android:text="行业资讯"
+                    android:text="实时比分"
                     android:textColor="@color/common_60"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -53,11 +76,11 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_forward2" />
+                    android:src="@drawable/icon_t4" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,11 +101,11 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_question" />
+                    android:src="@drawable/ic_question1" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -95,26 +118,22 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line_color" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:paddingLeft="12dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_kuaibao" />
-
-            <com.paradoxie.autoscrolltextview.VerticalTextview
-                android:id="@+id/tv_notification"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="4dp" />
-        </LinearLayout>
-
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="热门玩法"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
 
         <View
             android:layout_width="match_parent"
@@ -143,7 +162,7 @@
                     android:layout_height="50dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="12dp"
-                    android:src="@drawable/ic_ssq" />
+                    android:src="@drawable/ic_ssq2" />
 
                 <TextView
                     android:id="@+id/tv_ssq_title"
@@ -163,21 +182,16 @@
                     android:layout_alignBottom="@+id/ic_ssq"
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/ic_ssq"
-                    android:text="奖池："
+                    android:text="两元博500万"
                     android:textColor="@color/common_60"
                     android:textSize="12sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/ic_ssq"
-                    android:layout_toRightOf="@id/tv_ssq_des"
-                    android:background="@drawable/bg_red_4dp_round"
-                    android:paddingLeft="2dp"
-                    android:paddingRight="2dp"
-                    android:text="7.47亿"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_above="@+id/tv_ssq_title"
+                    android:layout_toRightOf="@+id/tv_ssq_title"
+                    android:background="@drawable/today_open" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -193,7 +207,7 @@
                     android:layout_height="50dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="12dp"
-                    android:src="@drawable/ic_dlt" />
+                    android:src="@drawable/ic_dlt2" />
 
                 <TextView
                     android:id="@+id/tv_dlt_title"
@@ -246,7 +260,7 @@
                     android:layout_height="50dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="12dp"
-                    android:src="@drawable/ic_pls" />
+                    android:src="@drawable/ic_pls2" />
 
                 <TextView
                     android:id="@+id/tv_pl3_title"
@@ -281,11 +295,11 @@
 
                 <ImageView
                     android:id="@+id/ic_pl5"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="12dp"
-                    android:src="@drawable/ic_pl5" />
+                    android:src="@drawable/ic_pl51" />
 
                 <TextView
                     android:id="@+id/tv_pl5_title"
@@ -338,7 +352,7 @@
                     android:layout_height="50dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="12dp"
-                    android:src="@drawable/ic_qxc" />
+                    android:src="@drawable/ic_qlc2" />
 
                 <TextView
                     android:id="@+id/tv_qlc_title"
@@ -377,7 +391,7 @@
                     android:layout_height="50dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="12dp"
-                    android:src="@drawable/ic_qlc" />
+                    android:src="@drawable/ic_qxc3" />
 
                 <TextView
                     android:id="@+id/tv_qxc_title"
@@ -413,12 +427,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:drawableLeft="@drawable/ic_laba"
             android:drawablePadding="5dp"
             android:gravity="center_vertical"
             android:paddingLeft="12dp"
             android:text="体育竞猜："
-            android:textColor="@color/green"
+            android:textColor="@color/red"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -441,7 +454,7 @@
                     android:layout_height="50dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="12dp"
-                    android:src="@drawable/ic_jczq" />
+                    android:src="@drawable/ic_jczq2" />
 
                 <TextView
                     android:id="@+id/tv_zq_title"
@@ -480,7 +493,7 @@
                     android:layout_height="50dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="12dp"
-                    android:src="@drawable/ic_jclq" />
+                    android:src="@drawable/ic_jclq2" />
 
                 <TextView
                     android:id="@+id/tv_lq_title"

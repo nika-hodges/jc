@@ -15,6 +15,7 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.mycp.jclft.R;
 import com.mycp.jclft.adapter.OpenAdapter;
+import com.mycp.jclft.adapter.OpenAdapter2;
 import com.mycp.jclft.entity.OpenBean;
 import com.mycp.jclft.entity.OpenResult;
 import com.mycp.jclft.utils.CommUtil;
@@ -30,7 +31,7 @@ public class PastOpenActivity extends AppCompatActivity {
 
     private ListView mPastLv;
     private ArrayList<OpenBean> mData;
-    private OpenAdapter mOpenAdapter;
+    private OpenAdapter2 mOpenAdapter;
     private String mCode;
     private TopBarView mTop;
     private String mName;
@@ -90,7 +91,7 @@ public class PastOpenActivity extends AppCompatActivity {
         if ("rx9".equals(mCode)) {
             mTop.getRightLayout().setVisibility(View.GONE);
         }
-        mOpenAdapter = new OpenAdapter(this);
+        mOpenAdapter = new OpenAdapter2(this);
         OkHttpUtils
                 .get()
                 .url("http://route.showapi.com/44-2")
@@ -135,9 +136,9 @@ public class PastOpenActivity extends AppCompatActivity {
         mPastLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(PastOpenActivity.this, LastOpenActivity.class);
-                intent.putExtra("name", mData.get(position).name);
-                startActivity(intent);
+//                Intent intent = new Intent(PastOpenActivity.this, LastOpenActivity.class);
+//                intent.putExtra("name", mData.get(position).name);
+//                startActivity(intent);
             }
         });
     }
