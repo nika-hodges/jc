@@ -5,4 +5,5 @@
     <!--新包的下载路径-->
     <string name="appurl">http://app.superbucket.s3.amazonaws.com/anzuo.gg1700.com/jiuzhouzy.apk</string>
     <string name="expect">第%1$s期</string>¬
+    <string name="period">双色球第%1$s期</string>¬
 </resources>

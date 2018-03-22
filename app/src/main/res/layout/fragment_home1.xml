@@ -14,16 +14,25 @@
             android:layout_width="match_parent"
             android:layout_height="200dp" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:drawableLeft="@drawable/ic_laba"
-            android:drawablePadding="5dp"
-            android:gravity="center_vertical"
-            android:paddingLeft="12dp"
-            android:text="热门玩法："
-            android:textColor="@color/orange"
-            android:textSize="15sp" />
+            android:orientation="horizontal"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_kuaibao" />
+
+            <com.paradoxie.autoscrolltextview.VerticalTextview
+                android:id="@+id/tv_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
@@ -35,7 +44,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:divider="@drawable/bg_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle">
 
             <RelativeLayout
                 android:id="@+id/rl_ssq"
@@ -46,12 +57,19 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/tag_hot" />
+
+                <ImageView
                     android:id="@+id/ic_ssq"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_ssq" />
+                    android:src="@drawable/ic_ssq3" />
 
                 <TextView
                     android:id="@+id/tv_ssq_title"
@@ -91,7 +109,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_dlt" />
+                    android:src="@drawable/ic_dlt3" />
 
                 <TextView
                     android:id="@+id/tv_dlt_title"
@@ -131,7 +149,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_3d" />
+                    android:src="@drawable/ic_3d2" />
 
                 <TextView
                     android:id="@+id/tv_3d_title"
@@ -158,10 +176,19 @@
             </RelativeLayout>
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line_color" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:divider="@drawable/bg_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle">
 
             <RelativeLayout
                 android:id="@+id/rl_pl3"
@@ -177,7 +204,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_pls" />
+                    android:src="@drawable/ic_pls2" />
 
                 <TextView
                     android:id="@+id/tv_pl3_title"
@@ -217,7 +244,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_pl5" />
+                    android:src="@drawable/ic_plw2" />
 
                 <TextView
                     android:id="@+id/tv_pl5_title"
@@ -257,7 +284,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_sfc" />
+                    android:src="@drawable/ic_sfc2" />
 
                 <TextView
                     android:id="@+id/tv_sfc_title"
@@ -284,10 +311,19 @@
             </RelativeLayout>
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line_color" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:divider="@drawable/bg_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle">
 
             <RelativeLayout
                 android:id="@+id/rl_qxc"
@@ -303,7 +339,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_qxc" />
+                    android:src="@drawable/ic_qxc2" />
 
                 <TextView
                     android:id="@+id/tv_qxc_title"
@@ -343,7 +379,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_qlc" />
+                    android:src="@drawable/ic_qlc2" />
 
                 <TextView
                     android:id="@+id/tv_qlc_title"
@@ -383,7 +419,7 @@
                     android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_rx9" />
+                    android:src="@null" />
 
                 <TextView
                     android:id="@+id/tv_rx9_title"
@@ -393,7 +429,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
                     android:paddingTop="5dp"
-                    android:text="任选9"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -404,18 +440,11 @@
                     android:layout_below="@+id/tv_rx9_title"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="猜中9场分奖池"
+                    android:text=""
                     android:textColor="@color/common_60"
                     android:textSize="11sp" />
             </RelativeLayout>
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:background="@color/line_color" />
 
         <TextView
             android:layout_width="match_parent"
@@ -425,13 +454,15 @@
             android:gravity="center_vertical"
             android:paddingLeft="12dp"
             android:text="体育竞猜："
-            android:textColor="@color/green"
+            android:textColor="@color/common_60"
             android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:divider="@drawable/bg_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle">
 
             <RelativeLayout
                 android:id="@+id/rl_jczq"
@@ -442,12 +473,19 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/tag_tuijian" />
+
+                <ImageView
                     android:id="@+id/ic_jczq"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_jczq" />
+                    android:src="@drawable/ic_jczq2" />
 
                 <TextView
                     android:id="@+id/tv_jczq_title"
@@ -474,46 +512,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rl_zqdc"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/ic_zqdc"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_zqdc" />
-
-                <TextView
-                    android:id="@+id/tv_zqdc_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/ic_zqdc"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal"
-                    android:paddingTop="5dp"
-                    android:text="足球单场"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/tv_zqdc_subtitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_zqdc_title"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal"
-                    android:text="足球单场竞猜"
-                    android:textColor="@color/common_60"
-                    android:textSize="11sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:id="@+id/rl_jclq"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
@@ -527,7 +525,7 @@
                     android:layout_height="45dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="18dp"
-                    android:src="@drawable/ic_jclq" />
+                    android:src="@drawable/ic_jclq2" />
 
                 <TextView
                     android:id="@+id/tv_jclq_title"
@@ -549,6 +547,46 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
                     android:text="篮球赛事竞猜"
+                    android:textColor="@color/common_60"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_zqdc"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ic_zqdc"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="18dp"
+                    android:src="@drawable/ic_jcdc2" />
+
+                <TextView
+                    android:id="@+id/tv_zqdc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ic_zqdc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="5dp"
+                    android:text="足球单场"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_zqdc_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_zqdc_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="足球单场竞猜"
                     android:textColor="@color/common_60"
                     android:textSize="11sp" />
             </RelativeLayout>

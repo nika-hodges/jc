@@ -3,7 +3,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    android:background="#E98A33"
+    android:background="#8CCCF0"
     android:paddingTop="16dp">
 
     <RelativeLayout

@@ -19,9 +19,11 @@ import com.mycp.jclft.fragment.DiscoveryFragment;
 import com.mycp.jclft.fragment.Home1Fragment;
 import com.mycp.jclft.fragment.Home2Fragment;
 import com.mycp.jclft.fragment.HomeFragment;
+import com.mycp.jclft.fragment.MyFragment;
 import com.mycp.jclft.fragment.NewsFragment;
 import com.mycp.jclft.fragment.OpenFragment;
 import com.mycp.jclft.fragment.OpenFragment1;
+import com.mycp.jclft.fragment.ScoreFragment;
 import com.mycp.jclft.utils.BottomNavigationViewHelper;
 
 import java.util.ArrayList;
@@ -68,6 +70,9 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.btm_nav_item3:
                         mViewPager.setCurrentItem(2);
                         break;
+                    case R.id.btm_nav_item4:
+                        mViewPager.setCurrentItem(3);
+                        break;
                 }
                 return true;
             }
@@ -93,15 +98,13 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initFragments() {
         mFragments = new ArrayList<>();
-        Home2Fragment home2Fragment = new Home2Fragment();
-//        Home1Fragment home1Fragment = new Home1Fragment();
-        OpenFragment1 openFragment1 = new OpenFragment1();
+        Home1Fragment home1Fragment = new Home1Fragment();
+        OpenFragment openFragment = new OpenFragment();
+        ScoreFragment scoreFragment = new ScoreFragment();
         DiscoveryFragment discoveryFragment = new DiscoveryFragment();
-//        NewsFragment fragment3 = new NewsFragment();
-//        MyFragment fragment4 = new MyFragment();
-        mFragments.add(home2Fragment);
-        mFragments.add(openFragment1);
+        mFragments.add(home1Fragment);
+        mFragments.add(scoreFragment);
+        mFragments.add(openFragment);
         mFragments.add(discoveryFragment);
-//        mFragments.add(fragment4);
     }
 }

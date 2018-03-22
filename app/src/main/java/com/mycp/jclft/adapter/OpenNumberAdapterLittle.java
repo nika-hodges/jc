@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by leo on 2017/7/7.
  */
-public class OpenNumberAdapter extends RecyclerView.Adapter<OpenNumberAdapter.MyViewHolder> {
+public class OpenNumberAdapterLittle extends RecyclerView.Adapter<OpenNumberAdapterLittle.MyViewHolder> {
 
     private Context mContext;
 
@@ -26,13 +26,13 @@ public class OpenNumberAdapter extends RecyclerView.Adapter<OpenNumberAdapter.My
 
     private List<String> data;
 
-    public OpenNumberAdapter(Context context) {
+    public OpenNumberAdapterLittle(Context context) {
         mContext = context;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        MyViewHolder myViewHolder = new MyViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_opne_code, parent, false));
+        MyViewHolder myViewHolder = new MyViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_opne_code_little, parent, false));
         return myViewHolder;
     }
 

@@ -81,25 +81,25 @@ public class OpenAdapter extends BaseAdapter {
             }
             switch (openBean.code) {
                 case "ssq":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_ssq));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_ssq3));
                     break;
                 case "dlt":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_dlt));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_dlt3));
                     break;
                 case "fc3d":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_3d));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_3d2));
                     break;
                 case "pl3":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_pls));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_pls2));
                     break;
                 case "pl5":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_pl5));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_plw2));
                     break;
                 case "qxc":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_qxc));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_qxc2));
                     break;
                 case "qlc":
-                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_qlc));
+                    holder.iconIv.setBackground(mContex.getResources().getDrawable(R.drawable.ic_qlc2));
                     break;
             }
             if (!TextUtils.isEmpty(openBean.expect)) {

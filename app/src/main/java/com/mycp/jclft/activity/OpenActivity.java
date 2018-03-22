@@ -3,8 +3,9 @@ package com.mycp.jclft.activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
@@ -15,7 +16,6 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.mycp.jclft.R;
 import com.mycp.jclft.adapter.OpenAdapter;
-import com.mycp.jclft.adapter.OpenAdapter2;
 import com.mycp.jclft.entity.OpenBean;
 import com.mycp.jclft.entity.OpenResult;
 import com.mycp.jclft.utils.CommUtil;
@@ -24,24 +24,26 @@ import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.Call;
 
-public class PastOpenActivity extends AppCompatActivity {
+/**
+ * Created by leo on 2018/3/22.
+ */
 
-    private ListView mPastLv;
-    private ArrayList<OpenBean> mData;
-    private OpenAdapter mOpenAdapter;
-    private String mCode;
+public class OpenActivity extends AppCompatActivity {
     private TopBarView mTop;
-    private String mName;
+    private OpenAdapter mOpenAdapter;
+    private ListView mOpenLV;
+    private List<OpenBean> mData;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_past_open);
-
+        setContentView(R.layout.fragment_two);
         Window window = getWindow();
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -54,15 +56,13 @@ public class PastOpenActivity extends AppCompatActivity {
                 window.setStatusBarColor(Color.TRANSPARENT);
             }
         }
-        Intent intent = getIntent();
-        mCode = intent.getStringExtra("code");
-        mName = intent.getStringExtra("name");
         initView();
         initData();
     }
 
     private void initView() {
-        mTop = (TopBarView) findViewById(R.id.view_top);
+        mTop = (TopBarView) findViewById(R.id.top);
+        mTop.setTitle("开奖信息");
         mTop.getLeftLayout().setVisibility(View.VISIBLE);
         mTop.getLeftLayout().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,33 +71,16 @@ public class PastOpenActivity extends AppCompatActivity {
             }
         });
         mTop.getRightLayout().setVisibility(View.GONE);
-        mPastLv = (ListView) findViewById(R.id.lv_past);
-    }
-
-
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        mName = intent.getStringExtra("name");
-        mCode = intent.getStringExtra("code");
-        if ("rx9".equals(mCode)) {
-            mTop.getRightLayout().setVisibility(View.GONE);
-        }
-        mTop.setTitle(mName);
+        mOpenLV = (ListView) findViewById(R.id.lv_open);
     }
 
     private void initData() {
-        mTop.setTitle(mName);
-        if ("rx9".equals(mCode)) {
-            mTop.getRightLayout().setVisibility(View.GONE);
-        }
         mOpenAdapter = new OpenAdapter(this);
         OkHttpUtils
                 .get()
-                .url("http://route.showapi.com/44-2")
+                .url("http://route.showapi.com/44-1")
                 .addParams("showapi_appid", "49035")
                 .addParams("showapi_sign", "6f6b85bce5e347139a9fc1affb25abd1")
-                .addParams("code", mCode)
                 .build()
                 .execute(new StringCallback() {
                     @Override
@@ -124,22 +107,22 @@ public class PastOpenActivity extends AppCompatActivity {
                                         || "pl3".equals(openBean.code)
                                         || "pl5".equals(openBean.code)
                                         || "qxc".equals(openBean.code)
-                                        || "zcsfc".equals(openBean.code)
                                         || "qlc".equals(openBean.code))) {
                                     mData.add(openBean);
                                 }
                             }
-                            mPastLv.setAdapter(mOpenAdapter);
+                            mOpenLV.setAdapter(mOpenAdapter);
                             mOpenAdapter.setData(mData);
                         }
                     }
                 });
-        mPastLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mOpenLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent = new Intent(PastOpenActivity.this, LastOpenActivity.class);
-//                intent.putExtra("name", mData.get(position).name);
-//                startActivity(intent);
+                Intent intent = new Intent(OpenActivity.this, LastOpenActivity.class);
+                intent.putExtra("name", mData.get(position).name);
+                intent.putExtra("code", mData.get(position).code);
+                startActivity(intent);
             }
         });
     }

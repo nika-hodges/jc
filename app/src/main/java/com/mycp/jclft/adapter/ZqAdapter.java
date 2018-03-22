@@ -54,7 +54,7 @@ public class ZqAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
         if (convertView == null) {
             viewHolder = new ViewHolder();
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_sport, parent, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_lq1, parent, false);
             viewHolder.mMatchTv = (TextView) convertView.findViewById(R.id.tv_match);
             viewHolder.mStatus = (TextView) convertView.findViewById(R.id.tv_status);
             viewHolder.mTeamNameA = (TextView) convertView.findViewById(R.id.tv_name_a);
@@ -69,6 +69,11 @@ public class ZqAdapter extends BaseAdapter {
         MatchInfo matchInfo = mData.get(position);
         if (!TextUtils.isEmpty(matchInfo.statusDesc)) {
             viewHolder.mStatus.setText(matchInfo.statusDesc);
+            if ("直播中".equals(matchInfo.statusDesc)) {
+                viewHolder.mStatus.setTextColor(mContext.getResources().getColor(R.color.green));
+            } else if ("已结束".equals(matchInfo.statusDesc)) {
+                viewHolder.mStatus.setTextColor(mContext.getResources().getColor(R.color.orange));
+            }
         }
         if (!TextUtils.isEmpty(matchInfo.leagueName)) {
             viewHolder.mMatchTv.setText(matchInfo.leagueName);

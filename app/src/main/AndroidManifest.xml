@@ -70,6 +70,7 @@
         <activity android:name=".activity.ExpActivity" />
         <activity android:name=".activity.LastOpenActivity1" />
         <activity android:name=".activity.SportActivity1" />
+        <activity android:name=".activity.OpenActivity" />
         <activity
             android:name=".activity.SettingActivity"
             android:launchMode="singleTask" />

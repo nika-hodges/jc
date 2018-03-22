@@ -3,14 +3,18 @@
 
     <item
         android:id="@+id/btm_nav_item1"
-        android:icon="@drawable/ic_home1"
+        android:icon="@drawable/ic_home2"
         android:title="首页" />
     <item
         android:id="@+id/btm_nav_item2"
-        android:icon="@drawable/ic_price1"
-        android:title="开奖" />
+        android:icon="@drawable/ic_score2"
+        android:title="比分" />
     <item
         android:id="@+id/btm_nav_item3"
-        android:icon="@drawable/ic_discovery"
+        android:icon="@drawable/ic_price2"
+        android:title="开奖" />
+    <item
+        android:id="@+id/btm_nav_item4"
+        android:icon="@drawable/ic_des2"
         android:title="发现" />
 </menu>

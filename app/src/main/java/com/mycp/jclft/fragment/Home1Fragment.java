@@ -9,6 +9,7 @@ import com.mycp.jclft.activity.LastOpenActivity;
 import com.mycp.jclft.activity.SportActivity;
 import com.mycp.jclft.base.BaseFragment;
 import com.mycp.jclft.loader.GlideImageLoader;
+import com.paradoxie.autoscrolltextview.VerticalTextview;
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
@@ -27,18 +28,19 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
     private RelativeLayout mQlcRl;
     private RelativeLayout mZqRl;
     private RelativeLayout mLqRl;
+    private ArrayList<String> mNotify = new ArrayList<>();
     private RelativeLayout mRx9Rl;
     private RelativeLayout mSfcRl;
     private RelativeLayout mZqdcRl;
     private RelativeLayout m3DRl;
+    private VerticalTextview mNotifyTv;
 
     @Override
     protected void initView(View view) {
         Banner banner = (Banner) view.findViewById(R.id.banner);
-        BannerList.add(R.drawable.banner5);
-        BannerList.add(R.drawable.banner7);
-        BannerList.add(R.drawable.banner6);
-        BannerList.add(R.drawable.banner4);
+        BannerList.add(R.drawable.banner10);
+        BannerList.add(R.drawable.banner8);
+        BannerList.add(R.drawable.banner3);
         banner.setImages(BannerList)
                 .setImageLoader(new GlideImageLoader())
                 .start();
@@ -56,6 +58,7 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
         mRx9Rl = (RelativeLayout) view.findViewById(R.id.rl_rx9);
         mSfcRl = (RelativeLayout) view.findViewById(R.id.rl_sfc);
         mZqdcRl = (RelativeLayout) view.findViewById(R.id.rl_zqdc);
+        mNotifyTv = (VerticalTextview) view.findViewById(R.id.tv_notification);
 
         m3DRl.setOnClickListener(this);
         mSsqRl.setOnClickListener(this);
@@ -66,7 +69,6 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
         mQlcRl.setOnClickListener(this);
         mZqRl.setOnClickListener(this);
         mLqRl.setOnClickListener(this);
-        mRx9Rl.setOnClickListener(this);
         mSfcRl.setOnClickListener(this);
         mZqdcRl.setOnClickListener(this);
     }
@@ -78,7 +80,14 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
 
     @Override
     protected void initData() {
-
+        mNotify.add("周六064比赛取消");
+        mNotify.add("美职篮新赛季战火重燃");
+        mNotify.add("周日053比赛取消");
+        mNotify.add("周六028比赛取消");
+        mNotifyTv.setTextList(mNotify);//加入显示内容,集合类型
+        mNotifyTv.setText(14, 5, getResources().getColor(R.color.common_60));//设置属性,具体跟踪源码
+        mNotifyTv.setTextStillTime(4000);//设置停留时长间隔
+        mNotifyTv.setAnimTime(300);//设置进入和退出的时间间隔
     }
 
     @Override
@@ -139,5 +148,17 @@ public class Home1Fragment extends BaseFragment implements View.OnClickListener 
         intent.putExtra("name", name);
         intent.putExtra("code", code);
         getActivity().startActivity(intent);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mNotifyTv.startAutoScroll();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mNotifyTv.stopAutoScroll();
     }
 }
